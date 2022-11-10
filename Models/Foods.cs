@@ -16,9 +16,9 @@ namespace FoodAppWebAPI.Models
         [Required]
         public double UnitPrice { get; set; }
 
-        public int Qty { get; set; }    
+        public int? Qty { get; set; }                           //notshowfrontend
 
-        public string FoodUrl { get; set; } 
+        public string FoodUrl { get; set; }    
 
         public virtual int RestuarantId { get; set; }
 
