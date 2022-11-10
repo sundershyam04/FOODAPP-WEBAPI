@@ -21,8 +21,10 @@ namespace FoodAppWebAPI.Models
             [Required()]
             [MaxLength(20, ErrorMessage = "Maximum 20 Characters only")]
             public string Email { get; set; }
+        //changed
             [Required()]
-            public int PhoneNumber { get; set; }
+            [Phone]
+            public string PhoneNumber { get; set; }
 
             [PasswordPropertyText]
             [Required()]
