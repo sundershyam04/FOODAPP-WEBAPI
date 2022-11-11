@@ -39,8 +39,10 @@ namespace FoodAppWebAPI.Controllers
         public void Put(int id, [FromBody] Restaurant c)
         {
             var found = context.RestaurantDetails.ToList().Find(f => f.RestuarantId == id);
-            context.RestaurantDetails.Remove(found);
-            context.RestaurantDetails.Add(c);
+            found.RestuarantId = c.RestuarantId;
+            found.RestaurantName=c.RestaurantName;
+            found.RestUrl = c.RestUrl;
+            found.City = c.City;
             context.SaveChanges();
 
         }
